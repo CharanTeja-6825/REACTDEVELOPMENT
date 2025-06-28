@@ -34,8 +34,15 @@ import { useState } from "react";
      setterMethod(newStateValue) => console.log(stateVariable) output = newStateValue
 
   useEffect in react :
-    useEffect in react is used track changes when components are rendered on the screen    
-
+    -> useEffect in react is used track changes and run side effects when components are rendered on the webpage
+    and there are three types if side-effect renders in useEffect ->
+    -> UseEffect takes two arguments : the side effect code and the optional
+    dependency array to control the when the side-effect code should be run
+    
+    No dependency :
+    Empty dependency : 
+    With Dependecy : 
+    
 */}
 
 
