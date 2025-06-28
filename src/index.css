@@ -1,0 +1,54 @@
+/* 
+  In react we can style our application in many ways :
+  -> external css
+  -> in-line css
+  -> tailwindcss
+  -> Sass
+  .
+  .
+  .
+  ..
+  You can find more possibilities as you go down this path
+
+  as you start developing application we will start using "tailwindcss"
+*/
+
+/* resetting default styles to zero */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #151515;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 1rem;
+}
+
+.card{
+  color: beige;
+  padding: 1rem;
+  background-color: rgb(51, 51, 52);
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: max-content;
+} 
+
+button{
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: gray;
+  border-radius: 0.5rem;
+}
