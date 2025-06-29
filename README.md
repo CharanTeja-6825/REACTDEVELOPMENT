@@ -6,7 +6,7 @@ A modern movie discovery web app built with React, styled for a clean UI, and po
 
 ## 📸 Preview
 
-![Homepage Screenshot](homepage-preview.png)
+![Homepage Screenshot](homepage.png)
 <!-- Replace with correct path if in a folder: docs/homepage-preview.png -->
 
 ## 🛠️ Built With
