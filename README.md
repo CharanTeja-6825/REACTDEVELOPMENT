@@ -36,7 +36,7 @@ A modern movie discovery web app built with React, styled for a clean UI, and po
 
 ## 🙏 Acknowledgements
 
-This project was built using the resources and guidance provided by **JS Master Pro** on YouTube.  
+This project was built using the resources and guidance provided by **JS MasteryPro** on YouTube.  
 Huge thanks for the clear explanations and practical tutorials!
 
 ---
