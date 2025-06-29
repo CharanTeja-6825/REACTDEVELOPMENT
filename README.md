@@ -1,12 +1,38 @@
-# React + Vite
+# 🎬 React Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern movie discovery web app built with React, styled for a clean UI, and powered by the TMDB API.
 
-Currently, two official plugins are available:
+🔗 **Live Demo**: [https://reactdevelopment-pied.vercel.app](https://reactdevelopment-pied.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Preview
 
-## Expanding the ESLint configuration
+![Homepage Screenshot](homepage-preview.png)
+<!-- Replace with correct path if in a folder: docs/homepage-preview.png -->
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Built With
+
+- **React** (with Hooks)
+- **Vite** (for fast dev/build)
+- **TMDB API** (for fetching movie data)
+- **CSS / Styled Components / Tailwind** (whichever you used)
+- **Vercel** (for deployment)
+
+## 🙏 Acknowledgements
+
+This project was built by following the guidance and tutorials provided by **JS Master Pro** on YouTube.  
+Thanks to him for making React + API integration so beginner-friendly!
+
+## 🚀 Features
+
+- Browse trending movies
+- View movie details
+- Responsive UI for all devices
+- Error handling for missing images and API failures
+
+## 🧑‍💻 How to Run Locally
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+npm install
+npm run dev
