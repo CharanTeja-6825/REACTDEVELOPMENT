@@ -3,7 +3,7 @@ import Search from "./components/Search";
 import Spinner from "./components/Spinner";
 import { MovieCard } from "./components/MovieCard";
 import { useDebounce } from "react-use";
-import { updateSearchCount } from "./appwrite";
+import { getTrendingMovies, updateSearchCount } from "./appwrite";
 // import "./index.css"
 
 const API_BASE_URL = "https://api.themoviedb.org/3";
@@ -20,6 +20,7 @@ const API_OPTIONS = {
 
 const App = () => {
 
+  const [trendingMovies, setTrendingMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [movies, setMovies] = useState([]);
@@ -66,19 +67,49 @@ const App = () => {
 
       }
     }
+
+    const loadTreandingMovies = async () => {
+      try {
+        const movies = await getTrendingMovies();
+        setTrendingMovies(movies);
+      } catch (error) {
+        console.error('Error Fetching Trending Movies');
+      }
+    }
+
+
   useEffect(() => {
     fetchMovies(debounceSearchTerm);
   }, [debounceSearchTerm]);
+
+  useEffect(() => {
+    loadTreandingMovies();
+  }, []);
   return(
     <main>
       <div className="pattern" />
       <div className="wrapper">
 
         <header>
-          <img src="../public/hero-img.png" alt="" />
+          <img src="hero-img.png" alt="" />
           <h1>Find <span className="text-gradient">Movies</span> you'll enjoy without hassle</h1>
           <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </header>
+
+        {trendingMovies.length > 0 && (
+          <section className="trending">
+            <h2>Trending Movies</h2>
+            <ul>
+              {trendingMovies.map((movie, ind) => (
+                <li key={ind}>
+                  <p>{ind + 1}</p>
+                  <img src={movie.poster_url} alt={movie.title} />
+                </li>
+              )
+              )}
+            </ul>
+          </section>
+        )}
         
         <section className="all-movies">
           <h2 className="mt-[20px]">All Movies</h2>
