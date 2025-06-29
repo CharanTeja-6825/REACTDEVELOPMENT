@@ -84,6 +84,7 @@ const App = () => {
 
   useEffect(() => {
     loadTreandingMovies();
+    // console.log(process.env.VITE_BASE_PATH);
   }, []);
   return(
     <main>
