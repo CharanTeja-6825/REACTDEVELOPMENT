@@ -1,5 +1,35 @@
-import "./index.css";
-import { useState } from "react";
+import React from "react";
+import "./index.css"
+
+const App = () => {
+  return(
+    <div>
+      <h2>This is a test component</h2>
+    </div>
+  )
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import "./index.css";
+// import { useEffect, useState } from "react";
 
 {/*
   React components follow pascal case where component
@@ -39,39 +69,49 @@ import { useState } from "react";
     -> UseEffect takes two arguments : the side effect code and the optional
     dependency array to control the when the side-effect code should be run
     
-    No dependency :
-    Empty dependency : 
-    With Dependecy : 
+    No dependency : This is not recommended because it renders the side-effects multiple times.
+    Empty dependency : This is rendered only single time on mount.
+    With Dependecy : This is rendered only if there is any change made to the dependencies inside the dependency array.
     
 */}
 
+// Check out the Below practical Example of React
 
 
-const SampleCard = ({ title }) => {
-  const [liked, setLiked] = useState(false);
-  return(
-    <div className="card">
-      {title}
-      <button onClick={() => {
-        setLiked(!liked);
-      }}>Like</button>
-      {!liked ? '🤍' : '❤️'}
-    </div>
-  )
-}
+// const SampleCard = ({ title }) => {
+//   const [count, setCount] = useState(0);
+//   const [liked, setLiked] = useState(false);
+
+//   useEffect(() => {
+//     console.log(`${title} is ${liked? 'Liked' : 'Disliked'}`)
+//   }, [liked]);
+
+//   return(
+//     <div className="card" onClick={() => {setCount(count+1)}}>
+//       {title}
+//       <button onClick={() => {
+//         setLiked(!liked);
+//       }}>
+//         {!liked ? '🤍' : '❤️'}
+//       </button>
+      
+//       <p>{count || null}</p>
+//     </div>
+//   )
+// }
 
 
-const App = () => {
- return(
-  <div className="card-container">
-    {/* <h2>This is a arrow function app</h2> */}
-    <SampleCard title="Bahubali"/>
-    <SampleCard title="Interstellar"/>
-    <SampleCard title="Blue Lock"/>
-    <SampleCard title="One Piece"/>
-  </div>
+// const App = () => {
+//  return(
+//   <div className="card-container">
+//     {/* <h2>This is a arrow function app</h2> */}
+//     <SampleCard title="Bahubali"/>
+//     <SampleCard title="Interstellar"/>
+//     <SampleCard title="Blue Lock"/>
+//     <SampleCard title="One Piece"/>
+//   </div>
   
- )
-}
+//  )
+// }
 
-export default App
+// export default App
